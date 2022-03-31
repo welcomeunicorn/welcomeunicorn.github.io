@@ -24,9 +24,9 @@
         <a-scene
             vr-mode-ui="enabled: false"
             loading-screen="enabled: false;"
-            arjs='sourceType: webcam; debugUIEnabled: false;'
+            arjs='sourceType: webcam; debugUIEnabled: false; patternRatio: 0.68;'
             id="scene"
-            embedded arjs="patternRatio: 0.68"
+            embedded
             gesture-detector
         >
             <a-assets>
@@ -43,21 +43,15 @@
                     playsinline
                 ></video>
             </a-assets>
-
-            <a-marker
-                type="pattern"
-                url="assets/pattern-qrcode-square.patt"
-            >
-                <a-video
+            <a-box position="5 0 -7" rotation="0 45 0" color="#4CC3D9"></a-box>
+            <a-video
                     src="#vid"
                     scale="2 2 2"
                     position="0 0.1 0"
                     rotation="-90 0 0"
                     class="clickable"
                     gesture-handler
-                ></a-video>
-            </a-marker>
-
+            ></a-video>
             <a-entity camera></a-entity>
         </a-scene>
     </body>
