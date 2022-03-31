@@ -15,11 +15,6 @@
                         this.toggle = true;
                         this.vid.play();
                     }.bind(this));
-
-                    marker.addEventListener('markerLost', function () {
-                        this.toggle = false;
-                        this.vid.pause();
-                    }.bind(this));
                 },
             });
         </script>
@@ -49,20 +44,19 @@
                 ></video>
             </a-assets>
 
-            <a-marker
+            <a-marker-camera
                 type="pattern"
-                url="assets/pattern-QR_450579.patt"
+                url="assets/pattern-qrcode-square.patt"
             >
                 <a-video
                     src="#vid"
-                    scale="1 1 1"
+                    scale="5 5 5"
                     position="0 0.1 0"
                     rotation="-90 0 0"
                     class="clickable"
-                    width='200'
                     gesture-handler
                 ></a-video>
-            </a-marker>
+            </a-marker-camera>
 
             <a-entity camera></a-entity>
         </a-scene>
