@@ -32,27 +32,7 @@
             id="scene"
             gesture-detector
         >
-            <a-assets>
-                <video controls
-                    id="vid"
-                    src="assets/asset.mp4"
-                    preload="auto"
-                    response-type="arraybuffer"
-                    loop
-                    crossorigin
-                    webkit-playsinline
-                    muted
-                    playsinline
-                ></video>
-            </a-assets>
-            <a-video
-                    src="#vid"
-                    scale="1 1 1"
-                    position="0 0.1 0"
-                    rotation="-90 0 0"
-                    class="clickable"
-                    gesture-handler
-            ></a-video>
+        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
         </a-scene>
     </body>
 </html>
