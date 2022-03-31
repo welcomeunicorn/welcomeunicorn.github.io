@@ -28,10 +28,10 @@
     <body style="margin: 0; overflow: hidden;">
         <a-scene
             vr-mode-ui="enabled: false"
-            loading-screen="enabled: false;"
+            loading-screen="enabled: true;"
             arjs='sourceType: webcam; debugUIEnabled: false;'
             id="scene"
-            embedded
+            embedded arjs="patternRatio: 0.68"
             gesture-detector
         >
             <a-assets>
@@ -55,10 +55,11 @@
             >
                 <a-video
                     src="#vid"
-                    scale="2 2 2"
+                    scale="1 1 1"
                     position="0 0.1 0"
                     rotation="-90 0 0"
                     class="clickable"
+                    width='200'
                     gesture-handler
                 ></a-video>
             </a-marker>
