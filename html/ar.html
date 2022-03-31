@@ -32,7 +32,10 @@
             id="scene"
             gesture-detector
         >
-        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+            <a-assets>
+                <a-asset-item id="yamasho" src="assets/MrYamasho.glb"></a-asset-item>
+            </a-assets>
+            <a-entity position="0 0 0" rotation="0 0 0" scale="2 2 2" glb-model="#yamasho"></a-entity>
         </a-scene>
     </body>
 </html>
