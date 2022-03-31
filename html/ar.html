@@ -30,21 +30,24 @@
             gesture-detector
         >
             <a-assets>
-                <video
+                <video controls
                     id="vid"
                     src="assets/asset.mp4"
                     preload="auto"
                     response-type="arraybuffer"
                     loop
                     crossorigin
-                    webkit-playsinline
-                    autoplay
                     muted
-                    playsinline
                 ></video>
             </a-assets>
-            <a-box position="5 0 -7" rotation="0 45 0" color="#4CC3D9"></a-box>
-            <a-entity camera></a-entity>
+            <a-video
+                    src="#vid"
+                    scale="2 2 2"
+                    position="0 0.1 0"
+                    rotation="-90 0 0"
+                    class="clickable"
+                    gesture-handler
+            ></a-video>
         </a-scene>
     </body>
 </html>
