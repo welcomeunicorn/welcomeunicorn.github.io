@@ -11,10 +11,13 @@
                     var marker = this.el;
                     this.vid = document.querySelector("#vid");
 
-                    marker.addEventListener('markerFound', function () {
-                        this.toggle = true;
-                        this.vid.play();
-                    }.bind(this));
+                    this.el.addEventListener("click", () => {
+                        if(vid.paused) {
+                            vid.play()
+                        }else {
+                            vid.pause()
+                        }
+                    })
                 },
             });
         </script>
@@ -24,7 +27,7 @@
         <a-scene
             vr-mode-ui="enabled: false"
             loading-screen="enabled: false;"
-            arjs='sourceType: webcam; debugUIEnabled: false; patternRatio: 0.68;'
+            arjs='sourceType: webcam; debugUIEnabled: false;'
             id="scene"
             embedded
             gesture-detector
@@ -37,17 +40,20 @@
                     response-type="arraybuffer"
                     loop
                     crossorigin
+                    webkit-playsinline
                     muted
+                    playsinline
                 ></video>
             </a-assets>
             <a-video
                     src="#vid"
-                    scale="2 2 2"
+                    scale="1 1 1"
                     position="0 0.1 0"
                     rotation="-90 0 0"
                     class="clickable"
                     gesture-handler
             ></a-video>
+            <a-entity camera></a-entity>
         </a-scene>
     </body>
 </html>
