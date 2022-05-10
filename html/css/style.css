@@ -4,12 +4,6 @@ body {
   text-align: center;
 }
 
-.movie {
-  z-index: 1;
-  -webkit-animation: contentScale 2.6s forwards;
-          animation: contentScale 2.6s forwards;
-}
-
 .content {
   -webkit-animation: contentScale 2.6s forwards;
           animation: contentScale 2.6s forwards;
