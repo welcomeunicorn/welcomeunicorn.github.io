@@ -19,8 +19,8 @@ body {
 }
 
 video {
-  -webkit-animation: cssAnimation 2.6s forwards;
-          animation: cssAnimation 2.6s forwards;
+  -webkit-animation: cssAnimation 3.6s forwards;
+          animation: cssAnimation 3.6s forwards;
 }
 
 @-webkit-keyframes cssAnimation {
