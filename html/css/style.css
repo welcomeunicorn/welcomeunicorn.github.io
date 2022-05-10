@@ -9,6 +9,8 @@ body {
   width: 90%;
   padding-top: 62.5%;
   margin: auto;
+  -webkit-animation: contentScale 2.6s forwards;
+          animation: contentScale 2.6s forwards;
 }
 
 .movie iframe {
