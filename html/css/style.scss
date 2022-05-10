@@ -8,8 +8,12 @@ body{
   font-family: sans-serif;
 }
 
-.movie{
+video{
   animation: cssAnimation 2.6s forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 @keyframes cssAnimation {
