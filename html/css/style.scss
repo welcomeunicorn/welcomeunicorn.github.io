@@ -41,6 +41,10 @@ body{
   }
 }
 
+video{
+  z-index: 1;
+}
+
 .content{
   animation: contentScale 2.6s forwards;
 }

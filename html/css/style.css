@@ -46,6 +46,10 @@ body {
           animation: shutterOpen 2.6s forwards;
 }
 
+video {
+  z-index: 1;
+}
+
 .content {
   -webkit-animation: contentScale 2.6s forwards;
           animation: contentScale 2.6s forwards;
