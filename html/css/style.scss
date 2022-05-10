@@ -7,22 +7,6 @@ body{
   text-align: center;
 }
 
-.movie {
-  position: relative;
-  width: 90%;
-  padding-top: 62.5%;
-  margin: auto;
-  animation: contentScale 2.6s forwards;
-}
-
-.movie iframe {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .message{
   width: 100%;
   height: 100%;
