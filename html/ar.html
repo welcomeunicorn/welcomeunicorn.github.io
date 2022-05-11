@@ -3,6 +3,7 @@
     <head>
         <style>
             #box {
+                display: none;
                 width: 250px;
                 height: 250px;
                 line-height: 250px;
@@ -11,7 +12,7 @@
                 text-align: center;
                 background-image: linear-gradient( to right,  rgb(158,143,254) 0%, rgb(113,202,255) 100% );
                 }
-                .active {
+            .active {
                 display: block !important;
             }
         </style>
@@ -45,7 +46,6 @@
     </head>
 
     <body style="margin: 0; overflow: hidden;">
-        <div id="box"></div>
         <a-scene
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
@@ -84,5 +84,6 @@
 
             <a-entity camera></a-entity>
         </a-scene>
+        <div id="box"></div>
     </body>
 </html>
