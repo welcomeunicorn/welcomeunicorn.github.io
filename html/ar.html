@@ -6,6 +6,26 @@
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+        <script>
+            AFRAME.registerComponent('collide', {
+              init: function() {
+                this.el.addEventListener('click', this.onClick);
+              },
+              onClick: function(e) {
+                var createEffect = function(point) {
+                  var pointStr = point.x + ' ' + point.y + ' ' + point.z;
+                  var effect = document.createElement('a-entity');
+                  effect.setAttribute('position', pointStr);
+                  effect.setAttribute('sound', 'src: #message; autoplay: true');
+                  return effect;
+                };
+                var point = e.detail.intersection.point;
+                var effect = createEffect(point);
+                var scene = document.querySelector('a-scene');
+                scene.appendChild(effect);
+              }
+            });
+          </script>
     </head>
 
     <body style="margin: 0; overflow: hidden;">
@@ -23,6 +43,7 @@
                     id="animated-asset"
                     src="assets/asset.glb"
                 ></a-asset-item>
+                <audio src="assets/message.mp3" id="message"></audio>
             </a-assets>
 
             <a-marker
