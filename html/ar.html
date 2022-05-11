@@ -1,6 +1,42 @@
 <!doctype html>
 <html>
     <head>
+        <style>
+            #box {
+                width: 250px;
+                height: 250px;
+                line-height: 250px;
+                color: #fff;
+                font-size: 1.5em;
+                text-align: center;
+                background-image: linear-gradient( to right,  rgb(158,143,254) 0%, rgb(113,202,255) 100% );
+                }
+                .active {
+                display: block !important;
+            }
+        </style>
+        <script>
+            let box = document.getElementById('box');
+
+            let changeElement = (el)=> {
+            //el.classList.toggle('active');
+                if(el.style.display==''){
+                    el.style.display='none';
+                }else{
+                    el.style.display='';
+                }
+            }
+
+            AFRAME.registerComponent('registerevents', {
+                init: function () {
+                    var marker = this.el;
+                    // マーカーを検出したイベントの登録
+                    marker.addEventListener('markerFound', function () {
+                        changeElement(box);
+                    });
+                }
+            });
+        </script>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -9,6 +45,7 @@
     </head>
 
     <body style="margin: 0; overflow: hidden;">
+        <div id="box"></div>
         <a-scene
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
