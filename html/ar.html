@@ -10,13 +10,9 @@
 
     <body style="margin: 0; overflow: hidden;">
         <a-scene
-            vr-mode-ui="enabled: false;"
-            loading-screen="enabled: false;"
-            renderer="logarithmicDepthBuffer: true;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-            id="scene"
+            loading-screen="enabled: true;"
+            arjs
             embedded
-            gesture-detector
         >
             <a-assets>
                 <a-asset-item
@@ -24,7 +20,6 @@
                     src="assets/asset.glb"
                 ></a-asset-item>
             </a-assets>
-            <a-entity camera></a-entity>
         </a-scene>
     </body>
 </html>
