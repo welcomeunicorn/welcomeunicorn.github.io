@@ -12,20 +12,17 @@
                 this.el.addEventListener('click', this.onClick);
               },
               onClick: function(e) {
-                var createEffect = function(point) {
-                  var pointStr = point.x + ' ' + point.y + ' ' + point.z;
+                var createEffect = function() {
                   var effect = document.createElement('a-entity');
-                  effect.setAttribute('position', pointStr);
                   effect.setAttribute('sound', 'src: #message; autoplay: true');
                   return effect;
                 };
-                var point = e.detail.intersection.point;
                 var effect = createEffect(point);
                 var scene = document.querySelector('a-scene');
                 scene.appendChild(effect);
               }
             });
-          </script>
+        </script>
     </head>
 
     <body style="margin: 0; overflow: hidden;">
@@ -39,11 +36,11 @@
             gesture-detector
         >
             <a-assets>
+                <audio src="assets/message.mp3" id="message"></audio>
                 <a-asset-item
                     id="animated-asset"
                     src="assets/asset.glb"
                 ></a-asset-item>
-                <audio src="assets/message.mp3" id="message"></audio>
             </a-assets>
 
             <a-marker
