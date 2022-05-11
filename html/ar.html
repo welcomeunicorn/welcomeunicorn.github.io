@@ -20,10 +20,31 @@
         >
             <a-assets>
                 <a-asset-item
-                    src="assets/asset.glb" id="MrYamasho"
+                    id="animated-asset"
+                    src="assets/asset.glb"
                 ></a-asset-item>
             </a-assets>
-            <a-gltf-model src="#MrYamasho" position="0 0 0" rotation="0 0 0"></a-gltf-model>
+
+            <a-marker
+                id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/pattern-QR_450579.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+                <a-entity
+                    id="bowser-model"
+                    scale="4.647899691310407 4.647899691310407 4.647899691310407"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+
             <a-entity camera></a-entity>
         </a-scene>
     </body>
