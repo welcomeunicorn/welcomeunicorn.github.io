@@ -17,6 +17,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
+  -webkit-animation: cssAnimation 3.6s forwards;
+          animation: cssAnimation 3.6s forwards;
   -webkit-appearance: none;
 }
 
@@ -69,6 +71,8 @@ video {
   font-weight: 500;
   background: #fafafa;
   text-decoration: none;
+  -webkit-animation: cssAnimation 3.6s forwards;
+          animation: cssAnimation 3.6s forwards;
 }
 
 .button005 a:hover {
@@ -123,6 +127,7 @@ video {
   height: 1px;
   -webkit-animation: shutterOpen 2.6s forwards;
           animation: shutterOpen 2.6s forwards;
+  -webkit-appearance: none;
 }
 
 @-webkit-keyframes byeShutter {
