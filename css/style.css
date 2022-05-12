@@ -48,7 +48,8 @@ video {
   }
 }
 
-.button018 a {
+.button005 a {
+  border-radius: 3px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,66 +60,18 @@ video {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  max-width: 225px;
-  padding: 10px 0px 10px 25px;
-  color: #fafafa;
+  max-width: 220px;
+  padding: 10px 25px;
+  color: #1e1e1e;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   font-weight: 500;
-  -webkit-appearance: none;
-}
-
-.button018 a:before, .button018 a:after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 50%;
-}
-
-.button018 a:before {
-  width: 0.5rem;
-  height: 0.5rem;
-  left: 1.1rem;
-  border-top: solid 2px #1e1e1e;
-  border-right: solid 2px #1e1e1e;
-  z-index: 2;
-  -webkit-transform: translateY(-50%) rotate(45deg);
-          transform: translateY(-50%) rotate(45deg);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.button018 a:after {
-  left: 0;
   background: #fafafa;
-  z-index: 1;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 4rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  text-decoration: none;
 }
 
-.button018 a span {
-  position: relative;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  z-index: 3;
-}
-
-.button018 a:hover span {
-  color: #1e1e1e;
-}
-
-.button018 a:hover:before {
-  left: 2rem;
-}
-
-.button018 a:hover:after {
-  right: 0;
-  width: 100%;
+.button005 a:hover {
+  background: #fff;
 }
 
 .content {
