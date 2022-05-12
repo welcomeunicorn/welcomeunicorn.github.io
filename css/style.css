@@ -3,6 +3,7 @@ body {
   color: #fafafa;
   text-align: center;
   font-family: sans-serif;
+  -webkit-appearance: none;
 }
 
 .movie {
@@ -16,11 +17,13 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
+  -webkit-appearance: none;
 }
 
 video {
   -webkit-animation: cssAnimation 3.6s forwards;
           animation: cssAnimation 3.6s forwards;
+  -webkit-appearance: none;
 }
 
 @-webkit-keyframes cssAnimation {
@@ -62,6 +65,7 @@ video {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   font-weight: 500;
+  -webkit-appearance: none;
 }
 
 .button018 a:before, .button018 a:after {
@@ -120,6 +124,7 @@ video {
 .content {
   -webkit-animation: contentScale 2.6s forwards;
           animation: contentScale 2.6s forwards;
+  -webkit-appearance: none;
 }
 
 .message {
@@ -136,6 +141,7 @@ video {
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
+  -webkit-appearance: none;
 }
 
 .shutter {
@@ -148,6 +154,7 @@ video {
   z-index: 9999;
   -webkit-animation: byeShutter 2.6s forwards;
           animation: byeShutter 2.6s forwards;
+  -webkit-appearance: none;
 }
 
 .shutter::before {

@@ -6,6 +6,7 @@ body{
   color: $font_color;
   text-align: center;
   font-family: sans-serif;
+  -webkit-appearance: none;
 }
 
 .movie{
@@ -13,10 +14,12 @@ body{
   align-items: center;
   justify-content: center;
   margin: auto;
+  -webkit-appearance: none;
 }
 
 video{
   animation: cssAnimation 3.6s forwards;
+  -webkit-appearance: none;
 }
 
 @keyframes cssAnimation {
@@ -41,6 +44,7 @@ video{
   color: #fafafa;
   transition: 0.3s ease-in-out;
   font-weight: 500;
+  -webkit-appearance: none;
 }
 
 .button018 a:before, .button018 a:after {
@@ -91,6 +95,7 @@ video{
 
 .content{
   animation: contentScale 2.6s forwards;
+  -webkit-appearance: none;
 }
 
 .message{
@@ -101,6 +106,7 @@ video{
   align-items: center;
   justify-content: center;
   margin: auto;
+  -webkit-appearance: none;
 }
 
 .shutter{
@@ -112,6 +118,7 @@ video{
   background-color:#f3f3f3;
   z-index:9999;
   animation: byeShutter 2.6s forwards;
+  -webkit-appearance: none;
   
   &::before{
     content:'';
