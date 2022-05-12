@@ -34,25 +34,17 @@ video{
   }
 }
 
-.button005 a {
+a {
+  z-index: -1;
   -webkit-appearance: none;
-  border-radius: 3px;
   position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  max-width: 220px;
-  padding: 10px 25px;
-  color: #1e1e1e;
-  transition: 0.3s ease-in-out;
+  color: #f3f3f3;
   font-weight: 500;
-  background: #fafafa;
-  text-decoration: none;
   animation: cssAnimation 3.6s forwards;
-}
-.button005 a:hover {
-  background: #fff
 }
 
 .content{
